@@ -1,0 +1,135 @@
+<head>
+  <title>Classic Cheesecake Recipe</title>
+</head>
+<main>
+  <section class="hero">
+    <h1>Classic Cheesecake Recipe</h1>
+    <div class="hero-description-container">
+      <img
+        src="/dev-challenges/recipe/6dots.svg"
+        alt=""
+      />
+      <p class="hero-description">
+        Look no further for a creamy and ultra smooth classic cheesecake recipe! Paired with a buttery graham cracker
+        crust, no one can deny its simple decadence. For the best results, bake in a water bath.
+      </p>
+    </div>
+    <img
+      src="/dev-challenges/recipe/cheesecake.png"
+      alt=""
+    />
+  </section>
+  <section class="content">
+    <article>
+      <h2 class="article-heading">Ingredients</h2>
+      <ul>
+        Graham Cracker Crust
+        <li>1 and 1/2 cups</li>
+      </ul>
+      <ul>
+        Cheesecake
+        <li>1 and 1/2 cups</li>
+      </ul>
+
+      <h2 class="article-heading">Instructions</h2>
+      <ol>
+        <li>Adjust the oven rack</li>
+      </ol>
+    </article>
+    <aside>
+      <div>
+        <h3>Yields</h3>
+        <p>12 servings</p>
+      </div>
+      <div>
+        <h3>Prep Time</h3>
+        <p>45 minutes</p>
+      </div>
+      <div>
+        <h3>Cook Time</h3>
+        <p>1 hour</p>
+      </div>
+      <div>
+        <h3>Total Time</h3>
+        <p>1.75 hours</p>
+      </div>
+    </aside>
+  </section>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,400;1,500&family=Playfair+Display:wght@400;700&display=swap");
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Montserrat";
+      margin: 0;
+    }
+
+    h1,
+    h2 {
+      font-family: "Playfair Display";
+    }
+
+    main {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    img {
+      max-width: 100%;
+      object-fit: cover;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-description {
+      max-width: 65ch;
+      font-size: 14px;
+      font-weight: 500;
+      font-style: italic;
+      margin: 0;
+      padding: 0;
+      color: #4f4f4f;
+    }
+
+    .hero-description-container {
+      display: flex;
+      align-items: start;
+      margin-bottom: 2rem;
+    }
+
+    .hero-description-container img {
+      margin-top: 4px;
+      margin-right: 0.75rem;
+    }
+
+    .hero {
+      margin-bottom: 3rem;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      justify-content: space-between;
+    }
+
+    .article-heading {
+      font-size: 1.5rem;
+      font-weight: 700;
+      line-height: 32px;
+    }
+
+    aside {
+      border-radius: 12px;
+      padding: 48px;
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</main>

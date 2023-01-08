@@ -1,0 +1,135 @@
+<section>
+  <div class="card">
+    <img
+      class="card__img"
+      src="/fe-mentor/product-preview-card/image-product-desktop.jpg"
+      alt="Gabrielle Essence Eau De Parfum"
+    />
+    <div class="card__content">
+      <span class="card__subtitle">Perfume</span>
+      <h2 class="card__title">Gabrielle Essence Eau De Parfum</h2>
+      <p class="card__description">
+        A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of
+        CHANEL.
+      </p>
+      <div class="card__price-container">
+        <span class="card__price--discount">$149.99</span>
+        <span class="card__price--original">$169.99</span>
+      </div>
+      <button class="card__btn">
+        <img
+          src="/fe-mentor/product-preview-card/icon-cart.svg"
+          alt="cart icon"
+        /> Add to Cart</button
+      >
+    </div>
+  </div>
+</section>
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+  section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #f2f2f2;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    padding: 0 2rem;
+  }
+
+  .card {
+    max-width: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 10px;
+    background: #ffffff;
+  }
+
+  .card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+  }
+
+  .card__content {
+    padding: 2rem;
+  }
+
+  .card__subtitle {
+    font-size: 0.75rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #6c7289;
+  }
+
+  .card__title {
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    color: #1c232b;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .card__description {
+    color: #6c7289;
+    font-size: 0.875rem;
+    line-height: 23px;
+    margin-bottom: 3rem;
+  }
+
+  .card__price-container {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .card__price--discount {
+    font-family: "Fraunces", serif;
+    font-size: 2rem;
+    color: #3d8168;
+    margin-right: 1rem;
+  }
+
+  .card__price--original {
+    text-decoration: line-through;
+    font-size: 0.875rem;
+    color: #6c7289;
+  }
+
+  .card__btn {
+    border-radius: 8px;
+    background: #3d8168;
+    border: none;
+    width: 100%;
+    padding: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+    cursor: pointer;
+  }
+
+  .card__btn:hover {
+    background: #1a4032;
+  }
+
+  @media (max-width: 664px) {
+    .card {
+      grid-template-columns: 1fr;
+    }
+
+    .card__img {
+      height: 240px;
+      border-radius: 10px 10px 0 0;
+    }
+  }
+</style>

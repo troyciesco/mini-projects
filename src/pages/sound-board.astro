@@ -1,0 +1,97 @@
+---
+import Layout from "../layouts/Layout.astro"
+---
+
+<Layout title="Sound Board">
+  <div class="sound-container">
+    <audio
+      src="/sounds/applause.mp3"
+      id="applause"
+    ></audio>
+    <audio
+      src="/sounds/boo.mp3"
+      id="boo"
+    ></audio>
+    <audio
+      src="/sounds/gasp.mp3"
+      id="gasp"
+    ></audio>
+    <audio
+      src="/sounds/tada.mp3"
+      id="tada"
+    ></audio>
+    <audio
+      src="/sounds/victory.mp3"
+      id="victory"
+    ></audio>
+    <audio
+      src="/sounds/wrong.mp3"
+      id="wrong"
+    ></audio>
+    <div id="buttons"></div>
+  </div>
+</Layout>
+
+<style is:global>
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap");
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .sound-container {
+    background-color: rgb(161, 100, 223);
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+  }
+
+  .sound-btn {
+    background-color: rebeccapurple;
+    border-radius: 5px;
+    border: none;
+    color: #ffffff;
+    margin: 1rem;
+    padding: 1.5rem 3rem;
+    font-size: 1.2rem;
+    font-family: inherit;
+    cursor: pointer;
+  }
+
+  .sound-btn:hover {
+    opacity: 0.9;
+  }
+</style>
+
+<script>
+  const sounds = ["applause", "boo", "gasp", "tada", "victory", "wrong"]
+
+  function stopSongs() {
+    sounds.forEach((sound) => {
+      const song = document.getElementById(sound)
+      // @ts-ignore
+      song!.pause()
+      // @ts-ignore
+      song!.currentTime = 0
+    })
+  }
+  sounds.forEach((sound) => {
+    const btn = document.createElement("button")
+    btn.classList.add("sound-btn")
+    btn.innerText = sound
+
+    btn.addEventListener("click", () => {
+      stopSongs()
+      // @ts-ignore
+      document.getElementById(sound)!.play()
+    })
+
+    document.getElementById("buttons")!.appendChild(btn)
+  })
+</script>
