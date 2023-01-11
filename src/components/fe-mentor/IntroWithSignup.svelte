@@ -15,7 +15,7 @@
         <div class="pricing">
           <p><strong>Try it free for 7 days</strong> then $20/mo thereafter</p>
         </div>
-        <form action="">
+        <form>
           <input
             type="text"
             name="firstName"

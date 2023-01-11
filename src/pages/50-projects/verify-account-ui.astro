@@ -1,0 +1,152 @@
+---
+import Layout from "$layouts/Layout.astro"
+---
+
+<Layout title="Verify Account UI">
+  <div class="container">
+    <h1>Verify Your Account</h1>
+    <p>We emailed a six digit code to name@example.com.</p>
+    <p>Enter the code below to confirm your email address.</p>
+    <div class="input-container">
+      <input
+        type="number"
+        class="input"
+        min="0"
+        max="9"
+        placeholder="-"
+        required
+      />
+      <input
+        type="number"
+        class="input"
+        min="0"
+        max="9"
+        placeholder="-"
+        required
+      />
+      <input
+        type="number"
+        class="input"
+        min="0"
+        max="9"
+        placeholder="-"
+        required
+      />
+      <input
+        type="number"
+        class="input"
+        min="0"
+        max="9"
+        placeholder="-"
+        required
+      />
+      <input
+        type="number"
+        class="input"
+        min="0"
+        max="9"
+        placeholder="-"
+        required
+      />
+      <input
+        type="number"
+        class="input"
+        min="0"
+        max="9"
+        placeholder="-"
+        required
+      />
+    </div>
+    <small class="info"
+      >This is design only. We didn't actually send you an email since we don't have your email, right?</small
+    >
+  </div>
+</Layout>
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Muli:wght@300;400;700&display=swap");
+
+  body {
+    font-family: "Muli", sans-serif;
+    background: #fbfcfe;
+  }
+
+  .container {
+    background: #ffffff;
+    border: 3px #000 solid;
+    border-radius: 8px;
+    padding: 32px;
+    max-width: 1000px;
+    text-align: center;
+  }
+
+  .input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+  }
+
+  .input {
+    border-radius: 8px;
+    font-size: 64px;
+    height: 120px;
+    width: 100px;
+    border: 1px solid #eeeeee;
+    margin: 1%;
+    text-align: center;
+    font-weight: 300;
+    -moz-appearance: textfield;
+  }
+
+  .input::-webkit-outer-spin-button,
+  .input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .input:valid {
+    border-color: #a6d1ed;
+    background-color: #a6d1ed;
+    box-shadow: 0 10px 10px -5px rgba(0, 0, 0, 0.25);
+  }
+
+  .info {
+    background-color: #eaeaea;
+    display: inline-block;
+    padding: 8px;
+    line-height: 20px;
+    max-width: 400px;
+    color: #777777;
+    border-radius: 8px;
+  }
+
+  @media screen and (max-width: 600px) {
+    .input-container {
+      flex-wrap: wrap;
+    }
+
+    .input {
+      font-size: 40px;
+      height: 80px;
+      max-width: 64px;
+    }
+  }
+</style>
+
+<script>
+  const inputs: any = document.querySelectorAll(".input")
+
+  inputs[0].focus()
+
+  inputs.forEach((input: any, index: any) => {
+    input.addEventListener("keydown", (e: any) => {
+      if (e.key >= 0 && e.key <= 9) {
+        inputs[index].value = ""
+        setTimeout(() => inputs[index + 1].focus(), 10)
+      } else if (e.key === "Backspace") {
+        setTimeout(() => inputs[index - 1].focus(), 10)
+      }
+    })
+  })
+</script>
