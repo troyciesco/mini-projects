@@ -56,14 +56,14 @@
 
   .container {
     max-width: 1158px;
-    padding: 0 24px;
-    padding-top: 88px;
+    padding: 0 1.5rem;
+    padding-top: 5.5rem;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr;
     justify-content: center;
     align-items: center;
-    gap: 24px;
+    gap: 1.5rem;
     @media screen and (min-width: 654px) {
       grid-template-columns: 1fr 1fr;
     }
@@ -72,7 +72,7 @@
     color: #ffffff;
 
     &__title {
-      font-size: 28px;
+      font-size: 1.75rem;
       font-weight: 700;
       text-align: center;
       margin-bottom: 24px;
