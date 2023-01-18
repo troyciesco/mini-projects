@@ -89,7 +89,10 @@
 
     &__btn {
       position: absolute;
-      bottom: -32px;
+      // ngl, point of this commit is to account for the fact that
+      // i had 35 contributions on a private gitlab today and i wanna keep the
+      // graph on github going
+      bottom: -2rem;
       left: calc(50% - 32px);
       border: none;
       border-radius: 50%;
